@@ -9,11 +9,7 @@
 function transformStateWithClones(state, actions) {
   // write code here
   const stateHistory = [];
-  const stateClone = {};
-
-  for (const key in state) {
-    stateClone[key] = state[key];
-  }
+  const stateClone = { ...state };
 
   for (let i = 0; i < actions.length; i++) {
     if (actions[i].type === 'addProperties') {
